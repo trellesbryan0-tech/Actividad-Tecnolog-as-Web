@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto y recursos | Simulador educativo del funcionamiento de la web</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="min-h-screen bg-slate-100 text-slate-800 antialiased">
+  <header class="bg-slate-900 text-slate-100 shadow-xl">
+    <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <a href="index.html" class="inline-flex items-center gap-2 rounded-full border border-slate-700 px-3 py-2 text-sm font-semibold uppercase tracking-[0.25em] text-slate-100">
+        <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-cyan-500/20 text-cyan-400">W</span>
+        Simulador Web
+      </a>
+
+      <button
+        id="menu-button"
+        class="inline-flex items-center rounded-md border border-slate-700 px-3 py-2 text-sm font-medium text-slate-100 md:hidden"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-menu"
+        aria-label="Abrir menú de navegación"
+      >
+        <span class="pr-2">☰</span> Menú
+      </button>
+
+      <nav id="site-menu" class="hidden w-full flex-col gap-2 pt-3 md:flex md:w-auto md:flex-row md:items-center md:gap-3 md:pt-0" aria-label="Navegación principal">
+        <a href="index.html" class="rounded-lg px-4 py-2 text-sm font-semibold text-slate-100 transition hover:bg-slate-800 hover:text-white">Inicio</a>
+        <a href="contenido.html" class="rounded-lg px-4 py-2 text-sm font-semibold text-slate-100 transition hover:bg-slate-800 hover:text-white">Contenido</a>
+        <a href="contacto.html" class="rounded-lg bg-cyan-600 px-4 py-2 text-sm font-semibold text-white" aria-current="page">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 lg:py-8">
+    <section class="grid gap-6 lg:grid-cols-[1fr_0.9fr]">
+      <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <h1 class="text-3xl font-bold text-slate-900">Contacto y recursos</h1>
+        <p class="mt-4 text-lg leading-8 text-slate-700">
+          Completa el formulario si deseas recibir materiales adicionales o dejar una sugerencia sobre el simulador.
+        </p>
+
+        <form class="mt-6 space-y-4">
+          <div>
+            <label for="nombre" class="mb-2 block text-sm font-semibold text-slate-700">Nombre completo</label>
+            <input id="nombre" name="nombre" type="text" required class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-800 shadow-sm" />
+          </div>
+
+          <div>
+            <label for="correo" class="mb-2 block text-sm font-semibold text-slate-700">Correo electrónico</label>
+            <input id="correo" name="correo" type="email" required class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-800 shadow-sm" />
+          </div>
+
+          <div>
+            <label for="tema" class="mb-2 block text-sm font-semibold text-slate-700">Tema</label>
+            <select id="tema" name="tema" class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-800 shadow-sm">
+              <option>Consulta</option>
+              <option>Solicitar recursos</option>
+              <option>Registro de actividad</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="mensaje" class="mb-2 block text-sm font-semibold text-slate-700">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-800 shadow-sm"></textarea>
+          </div>
+
+          <div class="flex flex-wrap gap-3">
+            <button type="submit" class="rounded-xl bg-cyan-600 px-5 py-3 text-sm font-semibold text-white hover:bg-cyan-700 focus-visible:bg-cyan-700">
+              Enviar formulario
+            </button>
+            <a href="index.html" class="rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-100 focus-visible:bg-slate-100">
+              Volver al inicio
+            </a>
+          </div>
+        </form>
+      </article>
+
+      <aside class="space-y-4">
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h2 class="text-lg font-semibold text-slate-900">Recursos disponibles</h2>
+          <ul class="mt-4 space-y-3 text-sm text-slate-700">
+            <li class="rounded-lg bg-slate-50 p-3">Guía de pasos del proceso web.</li>
+            <li class="rounded-lg bg-slate-50 p-3">Mapa conceptual del DNS y HTTP.</li>
+            <li class="rounded-lg bg-slate-50 p-3">Checklist de accesibilidad aplicada.</li>
+          </ul>
+        </div>
+
+        <div role="alert" class="rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-emerald-900">
+          <p class="font-semibold">Checklist interna de accesibilidad</p>
+          <ul class="mt-2 space-y-2 text-sm">
+            <li>• Contraste adecuado entre texto y fondo.</li>
+            <li>• Tipografía legible y tamaño suficiente.</li>
+            <li>• Uso de etiquetas semánticas como header, nav, main, section y footer.</li>
+            <li>• Imágenes con texto alternativo (alt).</li>
+            <li>• Estados visuales claros en enlaces y botones.</li>
+          </ul>
+        </div>
+
+        <div class="rounded-3xl border border-slate-200 bg-slate-900 p-6 text-slate-100 shadow-sm">
+          <h2 class="text-lg font-semibold">Badge y estado</h2>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="inline-flex items-center rounded-full bg-cyan-500/20 px-3 py-1 text-sm font-semibold text-cyan-300">A11Y</span>
+            <span class="inline-flex items-center rounded-full bg-emerald-500/20 px-3 py-1 text-sm font-semibold text-emerald-300">Responsive</span>
+            <span class="inline-flex items-center rounded-full bg-amber-500/20 px-3 py-1 text-sm font-semibold text-amber-300">Tailwind</span>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white py-6">
+    <div class="mx-auto max-w-7xl px-6 text-center text-sm text-slate-600">
+      <p>Actividad académica · Desarrollo Web · HTML5 + Tailwind CSS</p>
+    </div>
+  </footer>
+
+  <script src="js/menu.js"></script>
+</body>
+</html>
